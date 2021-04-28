@@ -1,0 +1,21 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.icons{
+    opacity : 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+.post:hover .icons{
+    opacity: 1;
+}
+
+@media (min-width: 768px){
+    .posts{
+        width :900px;
+    }
+}
