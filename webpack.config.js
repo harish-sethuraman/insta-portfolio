@@ -1,13 +1,14 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path=require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: "development",
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js|json$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -20,6 +21,11 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'data/', to: 'data/' },
+      ],
+    }),
     new MiniCssExtractPlugin({
       chunkFilename: "styles.css",
     }),
