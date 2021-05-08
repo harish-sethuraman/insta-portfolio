@@ -46,6 +46,7 @@ module.exports = {
       Icons : path.resolve(__dirname,'src/icons'),
       Images : path.resolve(__dirname,'src/images')
 
-    }
+    },
+    extensions: ['', '.js']
   }
 };
