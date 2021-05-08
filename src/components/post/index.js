@@ -1,24 +1,78 @@
-import React from "react";
-import HeartIcon from "Icons/heart";
+import React, { useState } from 'react';
+import {
+  HeartIcon, SendIcon, CommentIcon, CloseIcon,
+} from 'Icons/icons';
+import ImageLazy from 'Components/image-lazy';
+import InstaDp from 'Images/instadp.jpeg';
+import { renderImage } from './helper';
 
-const Post = () => {
+const Post = ({ title, description }) => {
+  const [showModal, setshowModal] = useState(false);
   return (
-    <div className="post relative">
-      <div className="post-reactions">
-        <div className="flex"> <HeartIcon fill="#fff" /> <p className="post-text-bold">100</p></div>
-        <div className="flex p-2"><HeartIcon fill="#fff" /> <p className="post-text-bold">100</p></div>
-      </div>
+    <>
+      <div className="post relative" onClick={() => setshowModal(true)}>
+        <div className="post-reactions">
+          <div className="flex">
+            <HeartIcon fill="#fff" />
+            <p className="text-bold">123</p>
+          </div>
+          <div className="flex left-padding">
+            <CommentIcon fill="#fff" />
+            <p className="text-bold">o</p>
+          </div>
+        </div>
 
-      <img
-        className="post-image"
-        alt="Photo by Elon Musk Now on March 17, 2021. May be an image of 1 person, standing and text that says 'OCCUPY'."
-        className="FFVAD"
-        crossOrigin="anonymous"
-        decoding="auto"
-        sizes="229px"
-        src="https://instagram.fmaa2-2.fna.fbcdn.net/v/t51.2885-15/e35/c32.0.415.415a/160998778_773530343300447_2817680919555834833_n.jpg?tp=1&amp;_nc_ht=instagram.fmaa2-2.fna.fbcdn.net&amp;_nc_cat=111&amp;_nc_ohc=a78iEOMF4jMAX91YLND&amp;edm=ABfd0MgAAAAA&amp;ccb=7-4&amp;oh=d6f8cd6979bb228e01bc13ff46b2d17f&amp;oe=60AC1366&amp;_nc_sid=7bff83"
-      ></img>
-    </div>
+        {renderImage(title, 'post-image')}
+      </div>
+      {showModal && (
+      <div className="post-modal">
+        <div className="close-button" onClick={() => setshowModal(false)}>
+          {' '}
+          <CloseIcon />
+          {' '}
+        </div>
+        <div className="modal">
+          <div className="modal-pic">{renderImage(title, 'modal-image')}</div>
+          <div className="modal-content">
+            <div className="modal-user-detail">
+              <ImageLazy source={InstaDp} classNames="rounded-full" />
+              <div className="name text-bold ">
+                Harish Kumar
+              </div>
+              <div>
+                <a className="follow">Follow</a>
+              </div>
+            </div>
+            <div className="post-description">
+              <ImageLazy source={InstaDp} classNames="rounded-full" />
+              <div className="description-content">
+                <span className=" post-text-bold ">
+                  Harish Kumar
+                </span>
+                {description}
+              </div>
+            </div>
+            <div className="reactions">
+              <div className="reactions-icons">
+                <HeartIcon />
+                <CommentIcon />
+                <SendIcon />
+              </div>
+              <div className="likes post-text-bold">123 likes</div>
+              <div className="comment">
+                <div className="emoji">🙂</div>
+                <div className="comment-text">
+                  Add a comment
+                  <div className="post-comment">Post</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      )}
+    </>
   );
 };
 

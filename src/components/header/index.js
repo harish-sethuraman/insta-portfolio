@@ -1,15 +1,18 @@
-import React from "react";
-import Name from "Components/name";
-import Stats from "Components/stats";
+import React from 'react';
+import Name from 'Components/name';
+import Stats from 'Components/stats';
+import InstaDp from 'Images/instadp.jpeg';
+import ImageLazy from 'Components/image-lazy';
 
 const Header = () => (
   <div className="header-wrapper">
     <div className="">
       <div className="flex mobile-header ">
         <div className="dp-holder">
-          <img
-            className="user-dp"
-            src="https://scontent-maa2-1.cdninstagram.com/v/t51.2885-19/s150x150/90037111_914867012277305_4337845844301578240_n.jpg?tp=1&_nc_ht=scontent-maa2-1.cdninstagram.com&_nc_ohc=Lg4BzxdS-XgAX9zkIw2&edm=ABfd0MgAAAAA&ccb=7-4&oh=0efc75d02299b0e8d44b69e4544c7c1f&oe=60AAC272&_nc_sid=7bff83"
+          <ImageLazy
+            alt="user display "
+            classNames="user-dp"
+            source={InstaDp}
           />
         </div>
         <div className="user-details">
@@ -21,20 +24,20 @@ const Header = () => (
           </div>
           <div className="user-description">
             <p className="user-strong-name">Frontend wizard</p>
-            <p>Doing magic with CSS</p>
-            <p>Harish Kumar</p>
-            <p>Harish Kumar</p>
-            <p>Harish Kumar</p>
+            <p>Trying to do magic with CSS</p>
+            <p>Does understand React a bit and can write in Ember JS as well</p>
+            <p>I've always wanted to use that spell.</p>
+            <p>Writes sites, packages and fixes code.</p>
           </div>
         </div>
       </div>
       <div className="mobile-description">
         <div className="">
-          <h1 className="user-strong-name">Frontend wizard</h1>
-          <p>Doing magic with CSS</p>
-          <p>Harish Kumar</p>
-          <p>Harish Kumar</p>
-          <p>Harish Kumar</p>
+        <p className="user-strong-name">Frontend wizard</p>
+            <p>Trying to do magic with CSS</p>
+            <p>Does understand React a bit and can write in Ember JS as well</p>
+            <p>I've always wanted to use that spell.</p>
+            <p>Writes sites, packages and fixes code.</p>
         </div>
       </div>
       <div className="mobile-user-stats">

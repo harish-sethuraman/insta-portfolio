@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchIcon from 'Icons/search';
+import { SearchIcon } from 'Icons/icons';
 
 const Search = () => (
   <div className="search-wrapper">

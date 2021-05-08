@@ -8,6 +8,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpeg|jpg|png|gif|svg|webp)$/i,
+        loader: 'file-loader',
+      },
+      {
         test: /\.js|json$/,
         exclude: /node_modules/,
         use: {
@@ -23,6 +27,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
+        'src/public/_redirects',
         { from: 'data/', to: 'data/' },
       ],
     }),
@@ -38,7 +43,9 @@ module.exports = {
     alias:{
       Components : path.resolve(__dirname,'src/components'),
       Pages : path.resolve(__dirname,'src/pages'),
-      Icons : path.resolve(__dirname,'src/icons')
+      Icons : path.resolve(__dirname,'src/icons'),
+      Images : path.resolve(__dirname,'src/images')
+
     }
   }
 };

@@ -1,17 +1,14 @@
-import React from "react";
-import Post from "Components/post";
-const Posts = ({PostsData}) => {
-  return <div className="posts">
-    {PostsData.map((postCollection) => (
-      <div className="posts-row">
-        {Array.isArray(postCollection) && postCollection.map((post) => {
-          console.log(post)
-          return <Post imageURL={post} />
-        }
-        )}
+import React from 'react';
+import Post from 'Components/post';
+
+const Posts = ({ PostsData }) => (
+  <div className="posts">
+    {PostsData.map((postCollection,index) => (
+      <div className="posts-row" key={index}>
+        {Array.isArray(postCollection) && postCollection.map((post) => <Post title={post.title} description={post.description} key={post.title} />)}
       </div>
     ))}
   </div>
-};
+);
 
 export default Posts;
