@@ -1,16 +1,16 @@
 import React from 'react';
-import Award from 'Images/award.jpeg';
-import Biriyani from 'Images/biriyani.jpeg';
-import Ceo from 'Images/ceo.jpeg';
-import Controllers from 'Images/controllers.jpeg';
+import Award from 'Images/award.JPEG';
+import Biriyani from 'Images/biriyani.JPEG';
+import Ceo from 'Images/ceo.JPEG';
+import Controllers from 'Images/controllers.JPEG';
 import Crm from 'Images/crm.jpg';
-import Doodles from 'Images/doodles.jpeg';
-import Firstday from 'Images/firstday.jpeg';
-import Menu from 'Images/menu.jpeg';
-import Prize from 'Images/prize.jpeg';
+import Doodles from 'Images/doodles.JPEG';
+import Firstday from 'Images/firstday.JPEG';
+import Menu from 'Images/menu.JPEG';
+import Prize from 'Images/prize.JPEG';
 import Winner from 'Images/winner.jpg';
-import Wefms from 'Images/wefms.jpeg';
-import Stay from 'Images/stay.jpeg';
+import Wefms from 'Images/wefms.JPEG';
+import Stay from 'Images/stay.JPEG';
 
 import ImageLazy from 'Components/image-lazy';
 
