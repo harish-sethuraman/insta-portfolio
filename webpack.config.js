@@ -41,10 +41,10 @@ module.exports = {
   },
   resolve:{
     alias:{
-      Components : path.resolve(__dirname,'src/components'),
-      Pages : path.resolve(__dirname,'src/pages'),
-      Icons : path.resolve(__dirname,'src/icons'),
-      Images : path.resolve(__dirname,'src/images')
+      Components : path.resolve(__dirname,'./src/components'),
+      Pages : path.resolve(__dirname,'./src/pages'),
+      Icons : path.resolve(__dirname,'./src/icons'),
+      Images : path.resolve(__dirname,'./src/images')
 
     },
     extensions: ['', '.js']
