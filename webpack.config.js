@@ -34,7 +34,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       chunkFilename: "styles.css",
     }),
-    new HtmlWebPackPlugin(),
+    new HtmlWebPackPlugin({
+      title : "Harish Kumar",
+      template:  'src/public/index.html'
+    }),
   ],
   devServer: {
     port: 1234,

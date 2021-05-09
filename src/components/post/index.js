@@ -18,7 +18,7 @@ const Post = ({ title, description }) => {
           </div>
           <div className="flex left-padding">
             <CommentIcon fill="#fff" />
-            <p className="text-bold">o</p>
+            <p className="text-bold">0</p>
           </div>
         </div>
 

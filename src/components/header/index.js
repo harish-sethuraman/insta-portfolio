@@ -22,7 +22,7 @@ const Header = () => (
           <div className="user-stats">
             <Stats />
           </div>
-          <div className="user-description">
+          <div className="user-description description">
             <p className="user-strong-name">Frontend wizard</p>
             <p>Trying to do magic with CSS</p>
             <p>Does understand React a bit and can write in Ember JS as well</p>
@@ -32,7 +32,7 @@ const Header = () => (
         </div>
       </div>
       <div className="mobile-description">
-        <div className="">
+        <div className="description">
         <p className="user-strong-name">Frontend wizard</p>
             <p>Trying to do magic with CSS</p>
             <p>Does understand React a bit and can write in Ember JS as well</p>
@@ -42,15 +42,15 @@ const Header = () => (
       </div>
       <div className="mobile-user-stats">
         <div className="mobile-stats">
-          <div className="stats-bold">100</div>
+          <div className="stats-bold">12</div>
           posts
         </div>
         <div className="mobile-stats  stats-mid">
-          <div className="stats-bold">100m</div>
+          <div className="stats-bold">464</div>
           followers
         </div>
         <div className="mobile-stats">
-          <div className="stats-bold">100m</div>
+          <div className="stats-bold">1044</div>
           following
         </div>
       </div>
