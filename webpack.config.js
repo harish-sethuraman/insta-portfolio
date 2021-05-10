@@ -1,7 +1,8 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path=require('path')
+const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const autoprefixer = require('autoprefixer')
 
 module.exports = {
   mode: "development",
@@ -20,7 +21,18 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', {
+          loader: "postcss-loader",
+          options: {
+            postcssOptions: {
+              plugins: [
+                [
+                  "autoprefixer"
+                ],
+              ],
+            },
+          }
+        }],
       },
     ],
   },
@@ -35,19 +47,19 @@ module.exports = {
       chunkFilename: "styles.css",
     }),
     new HtmlWebPackPlugin({
-      title : "Harish Kumar",
-      template:  'src/public/index.html'
+      title: "Harish Kumar",
+      template: 'src/public/index.html'
     }),
   ],
   devServer: {
     port: 1234,
   },
-  resolve:{
-    alias:{
-      Components : path.resolve(__dirname,'./src/components'),
-      Pages : path.resolve(__dirname,'./src/pages'),
-      Icons : path.resolve(__dirname,'./src/icons'),
-      Images : path.resolve(__dirname,'./src/images')
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, './src/components'),
+      Pages: path.resolve(__dirname, './src/pages'),
+      Icons: path.resolve(__dirname, './src/icons'),
+      Images: path.resolve(__dirname, './src/images')
 
     },
     extensions: ['', '.js']
