@@ -452,6 +452,8 @@ img {
 @media (max-width: 735px) {
     .modal-image{
         height: 100%;
+        margin: auto;
+        display: flex;
     }
     .modal {
         display: unset;
