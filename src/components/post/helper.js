@@ -14,6 +14,7 @@ import Stay from 'Images/stay.JPEG';
 
 import ImageLazy from 'Components/image-lazy';
 
+// eslint-disable-next-line import/prefer-default-export
 export const renderImage = (title, classNames) => {
   switch (title) {
     case 'award':

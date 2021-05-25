@@ -33,11 +33,11 @@ const Header = () => (
       </div>
       <div className="mobile-description">
         <div className="description">
-        <p className="user-strong-name">Frontend wizard</p>
-            <p>Trying to do magic with CSS</p>
-            <p>Does understand React a bit and can write in Ember JS as well</p>
-            <p>I've always wanted to use that spell.</p>
-            <p>Writes sites, packages and fixes code.</p>
+          <p className="user-strong-name">Frontend wizard</p>
+          <p>Trying to do magic with CSS</p>
+          <p>Does understand React a bit and can write in Ember JS as well</p>
+          <p>I've always wanted to use that spell.</p>
+          <p>Writes sites, packages and fixes code.</p>
         </div>
       </div>
       <div className="mobile-user-stats">
