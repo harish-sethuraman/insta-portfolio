@@ -53,6 +53,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         'src/public/_redirects',
+        'src/public/robots.txt',
       ],
     }),
     new MiniCssExtractPlugin({
