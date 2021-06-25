@@ -47,7 +47,12 @@ module.exports = {
           './Insta':
             './src/pages/home/index.js',
         },
-        shared: [{ react: { singleton: true } }],
+        shared: [{
+          react: {
+            requiredVersion: '^17.0.2',
+            singleton: true,
+          },
+        }],
       },
     ),
     new CopyWebpackPlugin({
