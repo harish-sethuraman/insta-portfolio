@@ -3,7 +3,7 @@ import {
   HeartIcon, SendIcon, CommentIcon, CloseIcon,
 } from 'Icons/icons';
 import ImageLazy from 'Components/image-lazy';
-import InstaDp from 'Images/instadp.jpeg';
+import InstaDp from 'Images/instadp.webp';
 import { renderImage } from './helper';
 
 const Post = ({ title, description }) => {

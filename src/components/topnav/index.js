@@ -4,8 +4,8 @@ import {
 } from 'Icons/icons';
 import Search from 'Components/search';
 import './index.css';
-import InstaDp from 'Images/instadp.jpeg';
-import InstaIcon from 'Images/instaicon.jpeg';
+import InstaDp from 'Images/instadp.webp';
+import InstaIcon from 'Images/instaicon.webp';
 import ImageLazy from 'Components/image-lazy';
 
 const TopNav = () => {

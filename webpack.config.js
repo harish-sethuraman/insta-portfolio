@@ -7,6 +7,8 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 
 module.exports = {
   mode: 'development',
+  output: { filename: 'insta.[id].js' },
+
   module: {
     rules: [
       {

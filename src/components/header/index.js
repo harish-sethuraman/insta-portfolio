@@ -1,7 +1,7 @@
 import React from 'react';
 import Name from 'Components/name';
 import Stats from 'Components/stats';
-import InstaDp from 'Images/instadp.jpeg';
+import InstaDp from 'Images/instadp.webp';
 import ImageLazy from 'Components/image-lazy';
 
 const Header = () => (
