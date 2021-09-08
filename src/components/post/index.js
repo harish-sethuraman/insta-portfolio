@@ -4,7 +4,7 @@ import {
 } from 'Icons/icons';
 import ImageLazy from 'Components/image-lazy';
 import InstaDp from 'Images/instadp.webp';
-import { renderImage } from './helper';
+import ImageRender from './helper';
 
 const Post = ({ title, description }) => {
   const [showModal, setshowModal] = useState(false);
@@ -21,18 +21,17 @@ const Post = ({ title, description }) => {
             <p className="text-bold">0</p>
           </div>
         </div>
-
-        {renderImage(title, 'post-image')}
+        <ImageRender title={title} classNames="post-image" />
       </div>
       {showModal && (
       <div className="post-modal">
         <div className="close-button" onClick={() => setshowModal(false)}>
-          {' '}
           <CloseIcon />
-          {' '}
         </div>
         <div className="modal">
-          <div className="modal-pic">{renderImage(title, 'modal-image')}</div>
+          <div className="modal-pic">
+            <ImageRender title={title} classNames="modal-image" />
+          </div>
           <div className="modal-content">
             <div className="modal-user-detail">
               <ImageLazy source={InstaDp} classNames="rounded-full" />
@@ -40,7 +39,7 @@ const Post = ({ title, description }) => {
                 Harish Kumar
               </div>
               <div>
-                <a className="follow">Follow</a>
+                <a href="https://www.instagram.com/this.strek/" className="follow">Follow</a>
               </div>
             </div>
             <div className="post-description">
