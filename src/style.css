@@ -2,6 +2,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     display: flex;
     margin: 0px;
+    background: white;
 }
 .rounded-full {
     border-radius: 50%;
