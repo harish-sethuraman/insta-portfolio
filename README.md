@@ -1,5 +1,5 @@
 # Instagram clone
-Instagram clone with proper media queries and all devices compatability. Exposes a remoteEntry file that can be consumed by clones.strek.in as micro frontend.
+Instagram clone with proper media queries and all devices compatability. Exposes a remoteEntry file that can be consumed by [clones.strek.in](https://clones.strek.in) as micro frontend.
 
 ## Development
 To start developing follow these steps
